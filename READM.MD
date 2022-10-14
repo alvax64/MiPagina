@@ -1,4 +1,5 @@
 ```bash
+#COMANDOS GIT BASH
 git init # iniciar un historial de cambios
 git add . # Agregar archivos para que genere el historial de cambios
 git commit -am "comentario" # agregar un comentario de los cambios que has hecho
