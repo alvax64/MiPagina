@@ -1,5 +1,5 @@
 * {
-    margin: 2px;
+    margin: 0px;
     /* SEPARAR ENTRE CONTENEDOR */
     padding: 0px;
     /* SEPARAR EL CONTENIDO INTERNO DEL CONTENEDOR */
@@ -24,10 +24,12 @@
 body {
     background: #0f0d25;
     color: #cce0a0;
+    margin: 2px;
 }
 
 /* ESTILOS BASE */
 .lista {
+    
     list-style: none;
 }
 
@@ -62,26 +64,45 @@ body {
 /* contenedor__objecto__item-cambio */
 
 .main {
-    display: flex;
     position: relative;
+    height: 400px;
+}
+
+.main__text {
+    position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    /* background: url('./assets/wolf.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
+    width: 100%;
+    height: 100%;
 }
 
-.float {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: #1d4389;
-    right: 50px;
-    bottom: 50px;
-    z-index: 1;
+.bg {
+    position: absolute;
+    background: url('./assets/wolf.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+}
+
+/* pseudoelementos */
+/* ALTERA AL ELEMENTO sin un estado */
+.bg::before {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+::selection {
+    background: #738253;
+    color: #0f0d25;
 }
 
 .main__yo {
@@ -91,10 +112,18 @@ body {
     /* color: rgb(165, 165, 165); */
 }
 
+
 .main__yo__h1 {
     font-size: x-large;
     text-align: center;
 }
+/* Pseudo-classes */
+/* CAMBIA CON UN ESTADO */
+.main__yo__h1:hover {
+    color: #616f41;
+}
+/* select */
+
 
 .main__yo__desc {
     font-size: medium;
@@ -153,15 +182,17 @@ body {
     flex-wrap: wrap; */
     display: grid;
     gap: 1rem;
-    grid-template-rows: 11rem;
+    /* grid-template-rows: 11rem; */
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    border: 1px solid red;
 }
 
 
-/* .lenguajes li {
+.lenguajes li {
     width: 250px; 
+    height: fit-content;
     border: 1px solid red;
-} */
+}
 
 /* RESPONSIVE */
 /* 
@@ -195,9 +226,8 @@ body {
         flex-direction: column;
     }
 
-    /* .lenguajes {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    } */
+    .main__avatar__img {
+        width: 150px;
+        height: 150px;
+    }
 }
