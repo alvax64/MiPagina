@@ -21,11 +21,6 @@
 
 } */
 
-
-
-
-
-
 body {
     background: #0f0d25;
     color: #cce0a0;
@@ -39,12 +34,9 @@ body {
 /* BEM */
 
 .menu {
-    /* contenedor */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* margin-top: 5px;
-    margin-bottom: 5px; */
     margin: 5px 0px;
     background: #1d43893d;
 }
@@ -70,11 +62,26 @@ body {
 /* contenedor__objecto__item-cambio */
 
 .main {
-    /* display: flex; */
+    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    text-align: center;
+    /* background: url('./assets/wolf.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
 
+.float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #1d4389;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1;
 }
 
 .main__yo {
@@ -92,18 +99,19 @@ body {
 .main__yo__desc {
     font-size: medium;
     justify-content: center;
+    margin: 20px;
 }
 
 .main__avatar {
     background: none;
     justify-content: center;
-    padding: 50px;
+    padding-bottom: 30px;
 }
 
 .main__avatar__img {
     width: 250px;
     height: 250px;
-
+    border-radius: 10px 50px;
 }
 
 .info {
@@ -128,9 +136,12 @@ body {
 
 .pie {
     color: rgba(215, 215, 215, 0.989);
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
     font-size: 11px;
     font-style: italic;
+    background:  	#d4112425;
 }
 
 .responsive {
@@ -147,10 +158,10 @@ body {
 }
 
 
-.lenguajes li {
-    /* width: 250px; */
-    /* border: 1px solid red; */
-}
+/* .lenguajes li {
+    width: 250px; 
+    border: 1px solid red;
+} */
 
 /* RESPONSIVE */
 /* 
@@ -178,6 +189,10 @@ body {
 
     .responsive {
         display: block;
+    }
+
+    .main {
+        flex-direction: column;
     }
 
     /* .lenguajes {
