@@ -1,233 +1,113 @@
-* {
-    margin: 0px;
-    /* SEPARAR ENTRE CONTENEDOR */
-    padding: 0px;
-    /* SEPARAR EL CONTENIDO INTERNO DEL CONTENEDOR */
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* MEDIA QUERY */
+body{
+    background-color: #2c2c2c;
+    
+}
+
+.item{
+    height: 150px;
+    width: 150px;
+    /* height: 150px; */
+    background-color: #141414;
+    color: aliceblue;
+    /* margin: 30px; */
+    
+}
+/* .item:nth-of-type(1) { order: 3; }
+.item:nth-of-type(2) { order: 2; }
+.item:nth-of-type(3) { order: 4; }
+.item:nth-of-type(4) { order: 1; } */
+
+.expand{
+    flex-grow: 3;
+}
+
+.shrink{
+    flex-shrink: 3;
+}
+
+.self{
+    align-self: flex-end;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    /* flex-direction: column-reverse; */
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    /* justify-content: space-evenly;
+    align-items: center; */
+    /* align-content: stretch; */
+    gap: 30px;
+}
 /* 
-
-    MOVIL FIRST
-    DESTK FIRST
-
-    |-|-|-|-|-|-|-|-|
-
-*/
-
-/* @media (condicion) {
-
-} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background: #0f0d25;
-    color: #cce0a0;
-    margin: 2px;
+    height: 100vh;
 }
 
-/* ESTILOS BASE */
-.lista {
-    
-    list-style: none;
-}
-
-/* BEM */
-
-.menu {
+.container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 5px 0px;
-    background: #1d43893d;
 }
 
-.menu__imagen {
-    /* item del contenedor */
-    width: 50px;
-    height: 50px;
+.item {
+    flex: 1;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(29, 29, 29);
 }
 
-.menu__lista {
-    display: flex;
-    align-items: center;
+.item:nth-child(1) {
+    background-color: rgb(255, 0, 0);
 }
 
-.menu__lista li a {
-    margin: 3px;
-    color: white;
-    text-decoration: none;
-}
+.item-order {
+    order: -1;
+} */
 
-/* contenedor__objecto__item */
-/* contenedor__objecto__item-cambio */
+/* NOTAS (español)
 
-.main {
-    position: relative;
-    height: 400px;
-}
+- flex container
 
-.main__text {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
+Display: flex; es una propiedad que permite al elemento contenedor (en este caso .container) que sus elementos hijos (en este caso .item) se comporten como si fueran flexibles.
 
-.bg {
-    position: absolute;
-    background: url('./assets/wolf.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    filter: blur(10px);
-}
+flex-direction (row, row-reverse, column, column-reverse): define la dirección en la que se colocan los elementos hijos.
 
-/* pseudoelementos */
-/* ALTERA AL ELEMENTO sin un estado */
-.bg::before {
-    content: '';
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-}
+flex-wrap (nowrap, wrap, wrap-reverse): define si los elementos hijos se colocan en una sola línea o en varias.
 
-::selection {
-    background: #738253;
-    color: #0f0d25;
-}
+flex-flow (flex-direction y flex-wrap): define la dirección y el comportamiento de los elementos hijos.
 
-.main__yo {
-    margin-bottom: 10px;
-    padding: 10px;
-    color: #cce0a0;
-    /* color: rgb(165, 165, 165); */
-}
+justify-content (flex-start, flex-end, center, space-between, space-around, space-evenly): define la alineación de los elementos hijos en el eje principal.
 
+align-items (flex-start, flex-end, center, baseline, stretch): define la alineación de los elementos hijos en el eje transversal.
 
-.main__yo__h1 {
-    font-size: x-large;
-    text-align: center;
-}
-/* Pseudo-classes */
-/* CAMBIA CON UN ESTADO */
-.main__yo__h1:hover {
-    color: #616f41;
-}
-/* select */
+align-content: (flex-start, flex-end, center, space-between, space-around, stretch): define la alineación de las líneas de elementos hijos en el eje transversal.
 
+gap, row-gap, column-gap (tamaño): define el espacio entre los elementos hijos.
 
-.main__yo__desc {
-    font-size: medium;
-    justify-content: center;
-    margin: 20px;
-}
+- Flex items
 
-.main__avatar {
-    background: none;
-    justify-content: center;
-    padding-bottom: 30px;
-}
+Flex: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se expanda o contraiga en función de la cantidad de espacio disponible.
 
-.main__avatar__img {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px 50px;
-}
+order: 1; es una propiedad que permite ordenar los elementos hijos (en este caso .item) en el orden que se desee.
 
-.info {
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-}
+flex-grow: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se expanda en función de la cantidad de espacio disponible.
 
-.info__head {
-    font-size: large;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+flex-flow: row wrap; es una propiedad que permite que los elementos hijos (en este caso .item) se comporten como si fueran flexibles y se ajusten a la cantidad de espacio disponible.
 
-.info__head2 {
-    font-size: larger;
-    margin-left: 25px;
-}
+flex-shrink: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se contraiga en función de la cantidad de espacio disponible.
 
-.info__par {
-    margin-left: 25px;
-}
-
-.pie {
-    color: rgba(215, 215, 215, 0.989);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    font-size: 11px;
-    font-style: italic;
-    background:  	#d4112425;
-}
-
-.responsive {
-    display: none;
-}
-
-.lenguajes {
-    /* display: flex;
-    flex-wrap: wrap; */
-    display: grid;
-    gap: 1rem;
-    /* grid-template-rows: 11rem; */
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    border: 1px solid red;
-}
-
-
-.lenguajes li {
-    width: 250px; 
-    height: fit-content;
-    border: 1px solid red;
-}
-
-/* RESPONSIVE */
-/* 
-    1. FLEX - FLEX WRAP
-        display: flex;
-        flex-wrap: wrap;
-    2. GRID 
-        display: grid;
-        grid-template-rows: 11rem;
-        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    3. Media Query's
-        @media only screen and (max-width: 600px) {}
+align-self: flex-end; es una propiedad que permite al elemento hijo (en este caso .item) alinearse en la dirección que se desee.
 
 */
-
-/* ABSOLUTOS - DINAMICOS */
-/* 16px = 1rem
-    x   = 11rem
-*/
-
-@media only screen and (max-width: 600px) {
-    .menu__lista-item {
-        display: none;
-    }
-
-    .responsive {
-        display: block;
-    }
-
-    .main {
-        flex-direction: column;
-    }
-
-    .main__avatar__img {
-        width: 150px;
-        height: 150px;
-    }
-}

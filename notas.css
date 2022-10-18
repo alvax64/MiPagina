@@ -41,3 +41,39 @@
 .lenguajes .lista {
     list-style: disc;
 } */
+
+/* NOTAS (español)
+
+- flex container
+
+Display: flex; es una propiedad que permite al elemento contenedor (en este caso .container) que sus elementos hijos (en este caso .item) se comporten como si fueran flexibles.
+
+flex-direction (row, row-reverse, column, column-reverse): define la dirección en la que se colocan los elementos hijos.
+
+flex-wrap (nowrap, wrap, wrap-reverse): define si los elementos hijos se colocan en una sola línea o en varias.
+
+flex-flow (flex-direction y flex-wrap): define la dirección y el comportamiento de los elementos hijos.
+
+justify-content (flex-start, flex-end, center, space-between, space-around, space-evenly): define la alineación de los elementos hijos en el eje principal.
+
+align-items (flex-start, flex-end, center, baseline, stretch): define la alineación de los elementos hijos en el eje transversal.
+
+align-content: (flex-start, flex-end, center, space-between, space-around, stretch): define la alineación de las líneas de elementos hijos en el eje transversal.
+
+gap, row-gap, column-gap (tamaño): define el espacio entre los elementos hijos.
+
+- Flex items
+
+Flex: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se expanda o contraiga en función de la cantidad de espacio disponible.
+
+order: 1; es una propiedad que permite ordenar los elementos hijos (en este caso .item) en el orden que se desee.
+
+flex-grow: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se expanda en función de la cantidad de espacio disponible.
+
+flex-flow: row wrap; es una propiedad que permite que los elementos hijos (en este caso .item) se comporten como si fueran flexibles y se ajusten a la cantidad de espacio disponible.
+
+flex-shrink: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se contraiga en función de la cantidad de espacio disponible.
+
+align-self: flex-end; es una propiedad que permite al elemento hijo (en este caso .item) alinearse en la dirección que se desee.
+
+*/
