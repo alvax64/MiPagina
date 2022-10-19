@@ -10,103 +10,87 @@
 </head>
 
 <body>
-    <div class="float">
 
-    </div>
-    <nav class="menu">
-        <img class="menu__imagen"
-            src="https://cdn.discordapp.com/avatars/542879126550216706/a895cc29e38bf5299c445ef848d742bf.webp?size=1024"
-            alt="avatar de alvax menu" draggable="false">
-        <ul class="menu__lista lista">
-            <li class="menu__lista-item responsive"><a href="">X</a></li>
-            <li class="menu__lista-item"><a href="">Quien soy</a></li>
-            <li class="menu__lista-item"><a href="">Lenguajes</a></li>
-        </ul>
-    </nav>
-    <main class="main">
-        <div class="bg">
+    <!-- 
+        TAREA: armar una buena estructura de la pagina
+        header - labecera okkkii
+            nav
+        main - contenido importante
+            section - secciones de la pagnia
+        footer - pie de la pagina
+            div - contenido
+        oki
+        vale, perfecto uwu
+     -->
+     <header>
+        
 
-        </div>
-        <div class="main__text">
-            <div class="main__yo">
-                <h1 class="main__yo__h1">
-                    Mi primera pagina
-                </h1>
-                <p class="main__yo__desc">
-                    Hola, yo soy Alvaro, pero pueden llamarme alvax. Esta es mi primera pagina web
+        <!-- no tengo la imagen a la mano -->
+        
+        
+        <nav class="enc">
+            <div class="enc__img">
+                <img class="logo" src="assets/lobo.webp" alt="logo pagina" draggable="false">
+            </div>
+            <ul class="enc__pags">
+                <!-- no se que poner xd -->
+                <li><a href="">Quién soy?</a></li>
+                <li><a href="">Lenguajes</a></li>
+                <li><a href="">Proyectos</a></li>
+                <li><a href="">Contáctame</a></li>
+            </ul>
+        </nav>
+     </header>
+     <main class="principal">
+        <section class="presentacion">
+            <div class="descripcion">
+                <h1>Mi página</h1>
+                <p>
+                    Hola, yo soy Alvaro, pero pueden llamarme alvax. Esta es mi primera página web (remasterizada).
                 </p>
             </div>
-            <div class="main__avatar">
-                <img class="main__avatar__img"
-                    src="https://cdn.discordapp.com/avatars/542879126550216706/a895cc29e38bf5299c445ef848d742bf.webp?size=1024"
-                    alt="avatar de alvax" draggable="false">
+            <div class="portada">
+                <img class="portada__img" src="/assets/lobo.webp" alt="lobo alvax" draggable="false">
             </div>
+        </section>
+        <section class="secciones">
+            <article class="about">
+                <h2>Quién soy?</h2>
+                <p> 
+                    Nací en Lima, Perú hace 20 años. Actualmente, soy un estudiante de Ingeniería Informática que está aprendiendo desarrollo web.
+                </p>
+            </article>
+            <article class="lenguajes">
+                <h2>Lenguajes</h2>
+                <p><a href="">Ver más</a></p>
+            </article>
+            <article class="proyectos">
+                <h2>Proyectos</h2>
+                <p><a href="">Ver más</a></p>
+                
+            </article>
+            <article class="contact">
+                <h2>Contáctame</h2>
+                <p>Estos son mis medios de contacto</p>
+                <ul class="lista redes">
+                    <li><a href="">Discord</a></li>
+                    <li><a href="">Instagram</a></li>
+                </ul>
+            </article>
+        </section>
+        
+     </main>
+     
+     <footer class="pie">
+        <div>
+            <p>
+                <small>
+                    Copyright 2022 ~ Agradecimientos a Kamerr que hizo esto posible
+                </small>
+            </p>
         </div>
-    </main>
+     </footer>
 
-    <section class="info">
-        <article>
-            <h2 class="info__head">Quien soy?</h2>
-            <p class="info__par1">
-                Naci en Lima, Peru hace 20 años. Actualmente, soy un estudiante de Ingenieria Informatica que esta
-                aprendiendo desarrollo web.
-            </p>
-        </article>
-        <article>
-            <h2 class="info__head">Lenguajes</h2>
-            <p class="info__par1">
-                De momento, estos son los lenguajes que manejo:
-            </p>
-            <ul class="lista lenguajes">
-                <li>
-                    <h3 class="info__head2">
-                        C
-                    </h3>
-                    <p class="info__par">
-                        Intermedio/Avanzado. <br>
-                        C fue el primer lenguaje que me ensenharon en la universidad y, creo, que lo domino a buen
-                        nivel.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="info__head2">C++</h3>
-                    <p class="info__par">
-                        Intermedio.
-                        Actualmente estoy aprendiendo C++, mas todavia no hemos visto a profundidad la parte de
-                        programacion orientada a objetos
-                    </p>
-                </li>
-                <li>
-                    <h3 class="info__head2">Oracle SQL</h3>
-                    <p class="info__par">
-                        Intermedio/Avanzado.
-                        Como parte del curso de bases de datos, aprendi el SQL de Oracle. Tambien lo se a buen nivel.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="info__head2">Python</h3>
-                    <p class="info__par">
-                        Basico/Intermedio.
-                        Aunque nunca me he "sentado" a aprenderlo, se da por hecho de que un estudiante de mi carrera
-                        puede entender un codigo hecho en Python, por lo que es usado a veces. No obstante, al no usarlo
-                        frecuentemente, no se muchas de las funciones que hay en sus packages.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="info__head2">Julia</h3>
-                    <p class="info__par">
-                        Basico/Intermedio.
-                        El semestre pasado tuvimos que aprender un lenguaje de programacion escogido al azar y me toco
-                        Julia. Es bastante similar a Python.
-                    </p>
-                </li>
-            </ul>
-        </article>
-    </section>
-    <footer class="pie">
-        <p>Copyright 2022 ~ Agradecimiento a Kamerr que hizo esto posible</p>
-    </footer>
-    <script src="./cosita.js"></script>
 </body>
 
 </html>
