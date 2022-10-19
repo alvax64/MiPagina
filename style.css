@@ -1,113 +1,170 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 body{
-    background-color: #2c2c2c;
-    
-}
-
-.item{
-    height: 150px;
-    width: 150px;
-    /* height: 150px; */
-    background-color: #141414;
-    color: aliceblue;
-    /* margin: 30px; */
-    
-}
-/* .item:nth-of-type(1) { order: 3; }
-.item:nth-of-type(2) { order: 2; }
-.item:nth-of-type(3) { order: 4; }
-.item:nth-of-type(4) { order: 1; } */
-
-.expand{
-    flex-grow: 3;
-}
-
-.shrink{
-    flex-shrink: 3;
-}
-
-.self{
-    align-self: flex-end;
+    background-color: #2c2c2c ;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    /* flex-direction: column-reverse; */
-    flex-wrap: wrap;
-    /* flex-flow: row wrap; */
-    /* justify-content: space-evenly;
+    color: antiquewhite;
+    display: grid;
+    /* otra forma: display: align-grid; 
+        lo pone en lineas.
+        funciona igual que flex, pero trabajaremos con grid-template-rows */
+    
+    /* grid-template-rows: 150px 300px;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-items: center;
     align-items: center; */
-    /* align-content: stretch; */
-    gap: 30px;
-}
-/* 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+    /* 
+       auto: el tamaño de la celda se ajusta al contenido
+       auto-fill: rellena el espacio con los elementos que hay
+       auto-fit: rellena el espacio con los elementos que hay y los ajusta
+
+    px: tamaño fijo
+    %: tamaño relativo
+    fr: fracción de espacio disponible
+    minmax: tamaño mínimo y máximo
+    repeat: repite el número de veces que le indiquemos
+
+    rem: tamaño relativo al tamaño de la fuente
+    em: tamaño relativo al tamaño de la fuente del elemento padre
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        font-size: 10px;
+    }
+
+    .container .item {
+        font-size: 2rem; // 32px
+        font-size: 2em; // 20px
+
+        font-size: .5rem; // 8px
+        font-size: .5em; // 5px
+
+        font-size: 1.5rem; // 24px
+        font-size: 1.5em; // 15px
+    }
+
+    */
+
+    gap: 50px;
+    grid-auto-flow: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    
+    /* grid-template-areas: 
+        'header header header header'
+        'sidebar main main main'
+        'footer footer footer footer'; */
+
+
 }
 
-body {
-    height: 100vh;
+.item{
+    background-color: #222222;
+    
 }
 
-.container {
-    display: flex;
-}
-
-.item {
-    flex: 1;
-    width: 150px;
-    height: 150px;
-    background-color: rgb(29, 29, 29);
-}
-
-.item:nth-child(1) {
-    background-color: rgb(255, 0, 0);
-}
-
-.item-order {
-    order: -1;
+/* .header{ */
+    /* solo se usa si hay grid-template-areas */
+    /* grid-area: header;
+    background-color: rgb(60, 18, 99);
 } */
 
-/* NOTAS (español)
+/* .sidebar{
+    grid-area: sidebar;
+    background-color: rgb(28, 16, 72);
+}
 
-- flex container
+.main{
+    grid-area: main;
+    background-color: rgb(0, 113, 75);
+}
 
-Display: flex; es una propiedad que permite al elemento contenedor (en este caso .container) que sus elementos hijos (en este caso .item) se comporten como si fueran flexibles.
+.footer{
+    grid-area: footer;
+    height: 100px;
+    
+} */
 
-flex-direction (row, row-reverse, column, column-reverse): define la dirección en la que se colocan los elementos hijos.
+ul{
+    list-style: none;
+}
 
-flex-wrap (nowrap, wrap, wrap-reverse): define si los elementos hijos se colocan en una sola línea o en varias.
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-flex-flow (flex-direction y flex-wrap): define la dirección y el comportamiento de los elementos hijos.
+/* 
 
-justify-content (flex-start, flex-end, center, space-between, space-around, space-evenly): define la alineación de los elementos hijos en el eje principal.
+    Tamaño de la pantalla
+    320px - 480px: móvil
+    481px - 768px: tablet
+    769px - 1024px: tablet grande
+    1025px - 1200px: portátil
+    1201px - 1440px: portátil grande
+    1441px - 1920px: monitor
+    1921px - 2560px: monitor grande
+    2561px - 3840px: monitor extra grande
+    3841px - 7680px: monitor ultra grande
 
-align-items (flex-start, flex-end, center, baseline, stretch): define la alineación de los elementos hijos en el eje transversal.
+*/
 
-align-content: (flex-start, flex-end, center, space-between, space-around, stretch): define la alineación de las líneas de elementos hijos en el eje transversal.
+@media (max-width: 600px){
+    
+    .container{
+        grid-template-areas: 
+        'header'
+        'sidebar'
+        'main'
+        'footer';
+    }
 
-gap, row-gap, column-gap (tamaño): define el espacio entre los elementos hijos.
+    /* .container {
+        display: flex;
+        flex-direction: column;
 
-- Flex items
+    } */
 
-Flex: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se expanda o contraiga en función de la cantidad de espacio disponible.
+}
 
-order: 1; es una propiedad que permite ordenar los elementos hijos (en este caso .item) en el orden que se desee.
+/* CSS TABLE */
 
-flex-grow: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se expanda en función de la cantidad de espacio disponible.
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #588c7e;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: left;
+}
 
-flex-flow: row wrap; es una propiedad que permite que los elementos hijos (en este caso .item) se comporten como si fueran flexibles y se ajusten a la cantidad de espacio disponible.
+th {
+    background-color: #588c7e;
+    color: white;
+}
 
-flex-shrink: 1; es una propiedad que permite que el elemento hijo (en este caso .item) se contraiga en función de la cantidad de espacio disponible.
+tr:nth-child(odd) {background-color: #909090}
 
-align-self: flex-end; es una propiedad que permite al elemento hijo (en este caso .item) alinearse en la dirección que se desee.
+/* 
+
+    border-collapse: collapse; // para que no se vean los bordes de las celdas
+    :nth-child(even) // para que las filas pares tengan un color diferente
+    even: filas pares
+    odd: filas impares
 
 */
