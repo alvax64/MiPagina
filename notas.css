@@ -48,15 +48,15 @@
 
 Display: flex; es una propiedad que permite al elemento contenedor (en este caso .container) que sus elementos hijos (en este caso .item) se comporten como si fueran flexibles.
 
-flex-direction (row, row-reverse, column, column-reverse): define la dirección en la que se colocan los elementos hijos.
+IMPORTANTE flex-direction (row, row-reverse, column, column-reverse): define la dirección en la que se colocan los elementos hijos.
 
-flex-wrap (nowrap, wrap, wrap-reverse): define si los elementos hijos se colocan en una sola línea o en varias.
+IMPORTANTE flex-wrap (nowrap, wrap, wrap-reverse): define si los elementos hijos se colocan en una sola línea o en varias.
 
 flex-flow (flex-direction y flex-wrap): define la dirección y el comportamiento de los elementos hijos.
 
-justify-content (flex-start, flex-end, center, space-between, space-around, space-evenly): define la alineación de los elementos hijos en el eje principal.
+IMPORTANTE justify-content (flex-start, flex-end, center, space-between, space-around, space-evenly): define la alineación de los elementos hijos en el eje principal.
 
-align-items (flex-start, flex-end, center, baseline, stretch): define la alineación de los elementos hijos en el eje transversal.
+IMPORTANTE align-items (flex-start, flex-end, center, baseline, stretch): define la alineación de los elementos hijos en el eje transversal.
 
 align-content: (flex-start, flex-end, center, space-between, space-around, stretch): define la alineación de las líneas de elementos hijos en el eje transversal.
 
