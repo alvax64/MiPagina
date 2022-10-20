@@ -1,3 +1,54 @@
+/* 
+
+    TIPOS DE SELECTORES
+
+    Selectores de tipo - h1 y pseudo-elementos ::before y ::after
+    Selectores de clase - .class
+    Selectores de ID - #id
+    Selectores de atributo - [type="text"]
+    selectores universales - *
+    selectores de descendencia - h1 span
+    la excepcion - !important (no recomendado)
+
+
+    Especificidad de las etiquetas
+
+    1. Selectores de tipo
+    2. Selectores de clase
+    3. Selectores de ID
+
+    p {
+       0 0 0 1
+    }
+
+    .class {
+       0 0 1 0
+    }
+
+    #id {
+       0 1 0 0
+    }
+
+    h1 span {
+       0 0 0 2
+    }
+
+    h1 span.class {
+       0 0 1 2
+    }
+
+    h1 span#id {
+       0 1 0 2
+    }
+
+    h1 span.class#id {
+       0 1 1 2
+    }
+
+
+*/
+
+
 *{
     margin: 0px;
     padding: 0px;
