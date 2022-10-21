@@ -26,6 +26,19 @@ body{
     background-color: var(--bg);
     display: flex;
     align-items: center;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    /* border-style: solid; */
+    border-image: 
+        linear-gradient(
+            0.25turn,
+            var(--bg),
+            white,
+            var(--bg)
+
+        ) 1 100%;
+    border-image-slice: 1;
+    width: 100%;
 }
 
 .menu__logo{
@@ -65,13 +78,25 @@ body{
 .filtros li a{
     text-decoration: none;
     color: white;
-    height: 54px;
+    
     
 }
 
-/* .filtro__seleccionado a{
-    background-color: #2E3A59;
+.filtro__seleccionado{
+    background-color: rgba(255, 255, 255, 0.1);
     height: 54px;
+    padding: 0px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .filtro__seleccionado a{
+    
+
+    
+    
 } */
 
 .post{
@@ -114,6 +139,7 @@ body{
 .post__info__boton ul{
     display: flex;
     list-style: none;
+    gap: 10px;
 }
 
 .post__info__boton ul button{
