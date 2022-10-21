@@ -1,163 +1,159 @@
-/* 
-
-    TIPOS DE SELECTORES
-
-    Selectores de tipo - h1 y pseudo-elementos ::before y ::after
-    Selectores de clase - .class
-    Selectores de ID - #id
-    Selectores de atributo - [type="text"]
-    selectores universales - *
-    selectores de descendencia - h1 span
-    la excepcion - !important (no recomendado)
-
-
-    Especificidad de las etiquetas
-
-    1. Selectores de tipo
-    2. Selectores de clase
-    3. Selectores de ID
-
-    p {
-       0 0 0 1
-    }
-
-    .class {
-       0 0 1 0
-    }
-
-    #id {
-       0 1 0 0
-    }
-
-    h1 span {
-       0 0 0 2
-    }
-
-    h1 span.class {
-       0 0 1 2
-    }
-
-    h1 span#id {
-       0 1 0 2
-    }
-
-    h1 span.class#id {
-       0 1 1 2
-    }
-
-
-*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     
+}
+
+/* #DEFINE */
+:root {
+    --bg: #3e3e3e;
+    --bg-2: #1B1B1B;
+    --btn-bg: #32313B;
+    --btn-bg-2: #2E3A59;
 }
 
 body{
-    background-color: #011140;
-    color: #F2EEB6;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.presentacion{
-    text-align: center;
-    
+    font-family: 'Fredoka One';
+    color: white;
+    background-color: var(--btn-bg);
 }
 
-h1{
-    font-size: 36px;
-    margin: 15px 0px;
-}
-
-.descripcion{
-    margin: 30px 0px;
-    
-}
-
-.enc{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #01062681;
-    justify-content: space-around;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.enc__pags{
+.menu{
+    background-color: var(--bg);
     display: flex;
     align-items: center;
+}
+
+.menu__logo{
+    height: 34.88px;
+    margin: 12.56px 19.07px;
+}
+
+.menu__ul{
     list-style: none;
+    display: flex;
+    gap: 40.18px;
 }
 
-.enc__pags li a{
-    margin: 3px;
+.menu__ul__boton a{
     
-    
-}
-
-a{
-    color: #F2EEB6;
+    font-style: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
     text-decoration: none;
 }
 
-.logo{
-    width: 50px;
-    height: 50px;
+.filtros{
+    margin: 0px 188px;
+    background-color: var(--bg-2);
+    border-radius: 10px;
 }
 
-.portada{
+.filtros ul{
     display: flex;
-    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+    height: 70px;
+    align-items: center;
+}
+
+.filtros li a{
+    text-decoration: none;
+    color: white;
+    height: 54px;
     
 }
 
-.portada__img{
-    width: 150px;
-    height: 150px;
+/* .filtro__seleccionado a{
+    background-color: #2E3A59;
+    height: 54px;
+} */
+
+.post{
+    margin: 26px 188px;
+    padding: 20px 42px;
+    background-color: var(--bg-2);
+    border-radius: 12px;
 }
 
-.secciones{
-    margin-top: 25px;
-    display: grid;
-    grid-template-areas: 
-        'a a a a'
-        'l l p p'
-        'c c c c';
-    gap: 25px;
+.post__portada{
+    border-radius: 12px;
+    width: 100%;
 }
 
-.about{
-    grid-area: a;
+.post__titulo{
+    margin-top: 41px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
 }
 
-.lenguajes{
-    grid-area: l;
-}
-
-.principal{
-    margin: 30px;
-    font-size: medium;
-}
-
-.proyectos{
-    grid-area: p;
-}
-
-.contact{
-    text-align: center;
-    grid-area: c;
-}
-
-.redes{
+.post__tags ul{
     display: flex;
-    
+    list-style: none;
+    gap: 30px;
+    margin: 24px 0px;
 }
 
+.post__tags li a{
+    text-decoration: none;
+    color: #0e67cf;
+    font-size: 20px;
+}
 
-
-.pie{
+.post__info{
     display: flex;
-    background-color: #8c277b91;
+    justify-content: space-between;
+}
+
+.post__info__boton ul{
+    display: flex;
+    list-style: none;
+}
+
+.post__info__boton ul button{
+    padding: 8px;
+    color: white;
     
+    border: 0px;
+    border-radius: 5px;
+}
+
+.reacciones{
+    background-color: #32313B;
+}
+
+.comentarios{
+    background-color: var(--btn-bg-2);
+}
+
+.post__info__user{
+    display: flex;
+}
+
+.datos__nombre{
+    font-size: normal;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: right;
+}
+
+.datos__fecha{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+}
+
+.post__info__user__perfil{
+    margin-left: 11px;
+    border-radius: 100%;
+    border: 2px solid white;
+    width: 40px;
 }

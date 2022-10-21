@@ -1,98 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8"> <!-- unicode -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatilbidad -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvax | Inicio</title>
+    <title>Proyecto de Zeew</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    
-
-    <!-- 
-        TAREA: armar una buena estructura de la pagina
-        header - labecera okkkii
-            nav
-        main - contenido importante
-            section - secciones de la pagnia
-        footer - pie de la pagina
-            div - contenido
-        oki
-        vale, perfecto uwu
-     -->
-     <header>
-        
-
-        <!-- no tengo la imagen a la mano -->
-        
-        
-        <nav class="enc">
-            <div class="enc__img">
-                <img class="logo" src="assets/lobo.webp" alt="logo pagina" draggable="false">
-            </div>
-            <ul class="enc__pags">
-                <!-- no se que poner xd -->
-                <li><a href="">Quién soy?</a></li>
-                <li><a href="">Lenguajes</a></li>
-                <li><a href="">Proyectos</a></li>
-                <li><a href="">Contáctame</a></li>
-            </ul>
-        </nav>
-     </header>
-     
-     <main class="principal">
-        <section class="presentacion">
-            <div class="descripcion">
-                <h1>Mi Página</h1>
-                <p>
-                    Hola, yo soy Alvaro, pero pueden llamarme alvax. Esta es mi primera página web (remasterizada).
-                </p>
-            </div>
-            <div class="portada">
-                <img class="portada__img" src="/assets/lobo.webp" alt="lobo alvax" draggable="false">
-            </div>
-        </section>
-        <section class="secciones">
-            <article class="about">
-                <h2>Quién soy?</h2>
-                <p> 
-                    Nací en Lima, Perú hace 20 años. Actualmente, soy un estudiante de Ingeniería Informática que está aprendiendo desarrollo web.
-                </p>
-            </article>
-            <article class="lenguajes">
-                <h2>Lenguajes</h2>
-                <p><a href="">Ver más</a></p>
-            </article>
-            <article class="proyectos">
-                <h2>Proyectos</h2>
-                <p><a href="">Ver más</a></p>
-                
-            </article>
-            <article class="contact">
-                <h2>Contáctame</h2>
-                <p>Estos son mis medios de contacto</p>
-                <ul class="lista redes">
-                    <li><a href="">Discord</a></li>
-                    <li><a href="">Instagram</a></li>
-                </ul>
-            </article>
-        </section>
-        
-     </main>
-     
-     <footer class="pie">
+    <nav class="menu">
         <div>
-            <p>
-                <small>
-                    Copyright 2022 ~ Agradecimientos a Kamerr que hizo esto posible
-                </small>
-            </p>
+            <a href=""><img class="menu__logo" src="https://kamerrezz.com/content/images/2022/08/avatar.png" alt=""></a>
+        </div>    
+        <ul class="menu__ul">
+            <li class="menu__ul__boton"><a href="">Talleres</a></li>
+            <li class="menu__ul__boton"><a href="">Comunidad</a></li>
+            <li class="menu__ul__boton"><a href="">Proyectos</a></li>
+            <li class="menu__ul__boton"><a href="">API</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+        <div class="filtros">
+            <ul>
+                <li><a href="">Más recientes</a></li>
+                <li class="filtro__seleccionado"><a href="">Más interactuados</a></li>
+                <li><a href="">Tus blogs</a></li>
+            </ul>
         </div>
-     </footer>
+        <section class="posts">
+            <article class="post">
+                <picture>
+                    <img class="post__portada" src="assets/javascript.jpg" alt="JavaScript Proyecto Zeew">
+                </picture>
+                <h1 class="post__titulo">
+                    JAVA SCRIPT TEXTO AAAAA as ASD
+                </h1>
+                <div class="post__tags">
+                    <ul>
+                        <li><a href="">#js</a></li>
+                        <li><a href="">#programación</a></li>
+                        <li><a href="">#code</a></li>
+                    </ul>
+                </div>
+                <div class="post__info">
+                    <div class="post__info__boton">
+                        <ul>
+                            <li>
+                                <button class="reacciones">
+                                    50 Reacciones
+                                </button></li>
+                            <li>
+                                <button class="comentarios">
+                                    50 Comentarios
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="post__info__user">
+                        <div class="datos">
+                            <p class="datos__nombre">alvax</p>
+                            <p class="datos__fecha"><time datetime="20-7-2022">Jul 20</time> - Hace 2 minutos</p>
+                        </div>
+                        <div>
+                            <a href=""><img class="post__info__user__perfil" src="assets/lobo.webp" alt="alvax Profile Picture"></a>
+                        </div>
+                    </div>
+                </div>
+    
+            </article>
+            <article class="post">
+                <h1 class="post__titulo">
+                    ARTE TITULO AAAAAA
+                </h1>
+                <div class="post__tags">
+                    <ul>
+                        <li><a href="">#dibujo</a></li>
+                        <li><a href="">#fuentes</a></li>
+                    </ul>
+                </div>
+                <div class="post__info">
+                    <div class="post__info__boton">
+                        <ul>
+                            <li>
+                                <button class="reacciones">
+                                    50 Reacciones
+                                </button></li>
+                            <li>
+                                <button class="comentarios">
+                                    50 Comentarios
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="post__info__user">
+                        <div class="datos">
+                            <p class="datos__nombre">alvax</p>
+                            <p class="datos__fecha"><time datetime="20-7-2022">Jul 20</time> - Hace 2 minutos</p>
+                        </div>
+                        <div>
+                            <a href=""><img class="post__info__user__perfil" src="assets/lobo.webp" alt="alvax Profile Picture"></a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+    </main>
+
 
 </body>
-
 </html>
