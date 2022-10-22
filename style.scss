@@ -1,0 +1,45 @@
+// variables
+$base-color: #000;
+
+// mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// extend
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// placeholders
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.message {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.card {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: $base-color;
+    @include border-radius(10px);
+
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
