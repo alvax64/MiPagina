@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// METOLOGIA BEM
+
+.card {
+
+    margin: 10px;
+
+    &__header {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+    }
+
+    &__body {
+        padding: 20px;
+    }
+}
+
+// extends
+// los extends son para copiar todo el codigo de una clase y pegarlo en otra
+
+
+
+.error {
+    color: red;
+
+    &--serios {
+        @extend .error;
+        border-width: 3px;
+    }
+}
+
+.sucess {
+    @extend .error;
+}
+
+
+@import 'global/code';
+
+// mixin
+// los mixin son como funciones que se pueden llamar en cualquier parte del codigo
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+.producto {
+    @include border-radius(10px);
+    @include box-shadow(5px 5px 5px #000);
+}
+
+// function
+// las funciones son como mixin pero se pueden llamar dentro de las propiedades
+
+@function pxToRem($px) {
+    @return $px / 16px * 1rem;
+}
+
+body {
+    font-size: pxToRem(16px);
+}
+
+// variables
+// las variables son como constantes que se pueden llamar en cualquier parte del codigo
+
+$color-primary: rgb(249, 129, 129);
+$color-secondary: #fff;
+
+body {
+    background-color: $color-primary;
+    color: $color-secondary;
+}
+
+// operadores
+// los operadores son para hacer operaciones matematicas
+
+$ancho: 100px;
+$alto: 50px;
+
+body {
+    width: $ancho + $alto;
+}
+
+// @debug
+// @debug es para mostrar en consola el valor de una variable
+
+@debug $ancho + $alto;
+
+// listas
+// las listas son para agrupar valores
+
+$colores-alerta: red, yellow, green;
+.alert {
+    font-size: 20px;
+    border: 1px solid #2c2c2c;
+    background: #2c2c2c;
+}
+
+@each $var in $colores-alerta {
+    .alert-#{$var} {
+        @extend .alert;
+        background-color: $var;
+    }
+}
+
+// mapas
+// los mapas son para agrupar valores con una clave
+
+$colores: (
+    primary: #000,
+    secondary: #fff,
+    success: green,
+    danger: red,
+    warning: yellow,
+    custom: $color-primary
+);
+
+@each $nombre, $color in $colores {
+    .text-#{$nombre} {
+        color: $color;
+    }
+}
+
+// calculos
+// los calculos son para hacer operaciones matematicas
+
+$width: calc(100% - 20px);
+
+.sidebar {
+    width: $width;
+}
+
+// 1260px = 100%
+// 100% - 20px = 1240px
+a {
+    width: calc(100% - 20px);
+}

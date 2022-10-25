@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  margin: 10px;
+}
+.card__header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+.card__body {
+  padding: 20px;
+}
+
+.error, .sucess, .error--serios {
+  color: red;
+}
+.error--serios {
+  border-width: 3px;
+}
+
+code {
+  padding: 0.25em;
+  line-height: 0;
+}
+
+.producto {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #000;
+  -moz-box-shadow: 5px 5px 5px #000;
+  -ms-box-shadow: 5px 5px 5px #000;
+  -o-box-shadow: 5px 5px 5px #000;
+  box-shadow: 5px 5px 5px #000;
+}
+
+body {
+  font-size: 1rem;
+}
+
+body {
+  background-color: #f98181;
+  color: #fff;
+}
+
+body {
+  width: 150px;
+}
+
+.alert, .alert-green, .alert-yellow, .alert-red {
+  font-size: 20px;
+  border: 1px solid #2c2c2c;
+  background: #2c2c2c;
+}
+
+.alert-red {
+  background-color: red;
+}
+
+.alert-yellow {
+  background-color: yellow;
+}
+
+.alert-green {
+  background-color: green;
+}
+
+.text-primary {
+  color: #000;
+}
+
+.text-secondary {
+  color: #fff;
+}
+
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+.text-warning {
+  color: yellow;
+}
+
+.text-custom {
+  color: #f98181;
+}
+
+.sidebar {
+  width: calc(100% - 20px);
+}
+
+a {
+  width: calc(100% - 20px);
+}
